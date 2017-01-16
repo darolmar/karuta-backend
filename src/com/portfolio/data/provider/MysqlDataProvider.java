@@ -13281,9 +13281,9 @@ public String getNodeUuidBySemtag(Connection c, String semtag, String uuid_paren
 			for( int i=0; i<text.size(); ++i )
 				st.setString(i+1, text.get(i));
 
-			st.setInt(text.size()+1, rrgId);
+			st.setInt(text.size()+1, rrgId); 
 
-			st.executeQuery();
+			st.executeUpdate();
 		}
 		catch( Exception e )
 		{
