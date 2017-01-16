@@ -2999,7 +2999,7 @@ public class RestServicePortfolio
 
 			logRestRequest(httpServletRequest, xmlNode, returnValue, Status.OK.getStatusCode());
 
-			if(returnValue == "faux")
+			if("faux".equals(returnValue))
 			{
 				throw new RestWebApplicationException(Status.FORBIDDEN, "Vous n'avez pas les droits d'acces");
 			}
@@ -3169,7 +3169,7 @@ public class RestServicePortfolio
 				logRestRequest(httpServletRequest, xmlNode, returnValue, Status.OK.getStatusCode());
 
 				Response response;
-				if(returnValue == "faux")
+				if("faux".equals(returnValue))
 				{
 					response = Response.status(event.status).entity(event.message).type(event.mediaType).build();
 					throw new RestWebApplicationException(Status.FORBIDDEN, "Vous n'avez pas les droits d'acces");
@@ -4788,7 +4788,7 @@ public class RestServicePortfolio
 			String returnValue = dataProvider.postNodeFromModelBySemanticTag(c, new MimeType("text/xml"),nodeUuid,semantictag, ui.userId, groupId).toString();
 			logRestRequest(httpServletRequest, xmlNode, returnValue, Status.OK.getStatusCode());
 
-			if(returnValue == "faux")
+			if("faux".equals(returnValue))
 			{
 				throw new RestWebApplicationException(Status.FORBIDDEN, "Vous n'avez pas les droits d'acces");
 			}
