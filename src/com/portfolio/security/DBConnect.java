@@ -2614,8 +2614,8 @@ public class DBConnect
 
       if( rs.next() )
       {
-        ret[0] = rs.getLong(0);
-        ret[1] = rs.getLong(1);
+        ret[0] = rs.getLong(1);
+        ret[1] = rs.getLong(2);
       }
     }
     catch( SQLException e )
